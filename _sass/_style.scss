@@ -1,11 +1,16 @@
 @use "./fonts" as *;
 
 $color-primary: hsl(0, 0%, 10%);
-$color-text: hsl(0, 0%, 20%);
-$color-subtext: hsl(0, 0%, 30%);
-$color-border: hsl(0, 0%, 85%);
+$color-text: black;
+$color-subtext: hsl(0, 0%, 25%);
+$color-border: hsl(0, 0%, 15%);
 $color-box-background: mix($color-primary, white, 4%);
 $border-radius: 4px;
+
+html {
+  background-image: url(./assets/bog.jpg);
+  background-position: 50% 40%;
+}
 
 body {
   box-sizing: content-box;
@@ -23,6 +28,17 @@ body {
   }
 }
 
+.wrapper {
+  margin: 0 auto;
+  background-image: url(./assets/paper.jpg);
+  background-size: cover;
+  border-radius: 60px 0 60px 0;
+}
+
+main {
+  padding: 4vh 6vw;
+}
+
 time {
   display: block;
   color: $color-subtext;
@@ -30,10 +46,10 @@ time {
 }
 
 footer {
-  margin: 2em 0;
+  margin: 1em 0;
   font-size: 0.8em;
   color: mix($color-text, white, 80%);
-  padding-top: 1em;
+  padding: 1em;
 }
 
 img {
@@ -84,7 +100,7 @@ a {
   color: $color-primary;
   &:hover {
     color: black !important;
-    background: #fffaf1;
+    background: #f3cb1a;
   }
   &:after {
     position: relative;
