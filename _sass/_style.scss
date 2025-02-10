@@ -4,7 +4,7 @@ $color-primary: hsl(0, 0%, 10%);
 $color-text: black;
 $color-subtext: hsl(0, 0%, 25%);
 $color-border: hsl(0, 0%, 15%);
-$color-box-background: mix($color-primary, white, 4%);
+$color-box-background: rgb(63, 90, 54, 0.25);
 $border-radius: 4px;
 
 html {
@@ -50,6 +50,8 @@ footer {
   font-size: 0.8em;
   color: mix($color-text, white, 80%);
   padding: 1em;
+  background-color: #f3ffef;
+  border-radius: 0 0 60px 0;
 }
 
 img {
@@ -99,15 +101,16 @@ a {
   border-bottom: 1px solid $color-border;
   color: $color-primary;
   &:hover {
-    color: black !important;
-    background: #f3cb1a;
+    color: #f3ffef !important;
+    background: #3f5a36;
+    border-bottom: 1px solid #f3ffef;
   }
   &:after {
     position: relative;
     top: -0.5em;
     font-size: 0.7em;
     content: "↗";
-    color: #aaaaaa;
+    color: #f3ffef;
   }
   &.internal-link:after,
   &.footnote:after,
@@ -117,12 +120,47 @@ a {
 }
 
 *:focus {
-  background: #ffe8bc !important;
-  color: black !important;
+  transform: scale(0.95);
 }
 
 nav {
-  margin: 1em 0 3em;
+  margin: 0 0 1em 0;
+  display: flex;
+  background-color: rgba(63, 90, 54, 0.75);
+  border-radius: 60px 0 60px 0;
+
+  a {
+    margin: 0 auto;
+    color: #f3ffef;
+    border-bottom: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      border-bottom: transparent;
+      background-color: transparent;
+    }
+
+    .lily {
+      max-width: 300px;
+      max-height: 150px;
+      width: 50vw;
+      height: 25vh;
+      mask: url(./assets/lily.svg) no-repeat center;
+      -webkit-mask: url(./assets/lily.svg) no-repeat center;
+      background-color: #f3ffef;
+    }
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    h2,
+    p {
+      margin-top: 0;
+    }
+  }
 }
 
 #notes-entry-container {
