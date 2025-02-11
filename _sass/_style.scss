@@ -110,7 +110,7 @@ a {
     top: -0.5em;
     font-size: 0.7em;
     content: "↗";
-    color: #f3ffef;
+    color: black;
   }
   &.internal-link:after,
   &.footnote:after,
@@ -198,4 +198,54 @@ code {
 .invalid-link-brackets {
   color: #ccc;
   cursor: help;
+}
+
+.home-welcome {
+  display: flex;
+  align-items: stretch;
+  gap: 2vw;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  .welcome-img {
+    max-width: 300px;
+    width: 80vw;
+    background-image: url(./assets/lunar.jpg);
+    background-size: cover;
+    border-radius: $border-radius;
+
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
+}
+
+.home-links {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  div {
+    min-width: 265px;
+    max-width: 400px;
+    width: 20vw;
+  }
+
+  .links-img {
+    background-image: url(./assets/hands.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: $border-radius;
+
+    @media (max-width: 650px) {
+      display: none;
+    }
+  }
 }
