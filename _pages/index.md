@@ -26,7 +26,7 @@ permalink: /
   <div>
     <h2>themesᯓ★</h2>
     <p>here are some starting points if you're not sure where to jump in!</p>
-    <p>[[tech]] [[anti-capitalism]] [[occult]] [[books]] [[mental health]] [[writing]]</p>
+    <p>[[tech]] [[anti-capitalism]] [[occult]] [[neurodiversity]] [[queerness]]</p>
   </div>
 
   <div>
